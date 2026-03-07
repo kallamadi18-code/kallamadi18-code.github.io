@@ -857,89 +857,69 @@
         }
 
         /* ===== CERTIFICATIONS SECTION ===== */
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .cert-card {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 2.5rem;
-            border-radius: 25px;
-            border: 1px solid rgba(10, 102, 194, 0.2);
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cert-card::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background: var(--gradient-1);
-            opacity: 0.05;
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .cert-card:hover::after {
-            transform: scale(1.5);
-        }
-
-        .cert-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cert-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .fa-microsoft { color: #00a4ef; }
-        .fa-robot { color: var(--secondary); }
-        .fa-ibm { color: #1f70c1; }
-        .fa-microchip { color: var(--accent); }
-
-        .cert-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .cert-issuer {
-            color: var(--secondary);
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .cert-date {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cert-link {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-
-        .cert-link:hover {
-            color: var(--secondary);
-            gap: 1rem;
-        }
+        <!-- Certifications Section -->
+<section id="certifications">
+    <div class="section-header" data-aos="fade-up">
+        <div class="section-subtitle">CREDENTIALS</div>
+        <h2 class="section-title">Certifications & <span>Achievements</span></h2>
+        <div class="section-line"></div>
+    </div>
+    
+    <div class="certs-grid">
+        <!-- Microsoft AI & ML Engineering -->
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="cert-icon">
+                <i class="fab fa-microsoft"></i>
+            </div>
+            <h3 class="cert-title">Microsoft AI & ML Engineering</h3>
+            <div class="cert-issuer">Microsoft</div>
+            <div class="cert-date">June 2025</div>
+            <a href="https://coursera.org/share/d365790a78e9b5aaf6b67e1a2bd138b9" class="cert-link" target="_blank">
+                View Certificate <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Generative AI for Everyone -->
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="cert-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="cert-title">Generative AI for Everyone</h3>
+            <div class="cert-issuer">DeepLearning.AI</div>
+            <div class="cert-date">May 2025</div>
+            <a href="https://coursera.org/share/646df84b924d7e595024406345d04379" class="cert-link" target="_blank">
+                View Certificate <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Python for Data Science, AI & Development -->
+        <div class="cert-card ibm-cert" data-aos="fade-up" data-aos-delay="300">
+            <div class="cert-icon">
+                <i class="fab fa-ibm"></i>
+                <span>✨</span>
+            </div>
+            <h3 class="cert-title">Python for Data Science, AI & Development</h3>
+            <div class="cert-issuer">IBM</div>
+            <div class="cert-date">2025</div>
+            <a href="https://coursera.org/share/02465470492c1cdfff0d7d0e6e8b7aea" class="cert-link" target="_blank">
+                View Certificate <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Advanced AI and Machine Learning Techniques -->
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="cert-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <h3 class="cert-title">Advanced AI and Machine Learning Techniques</h3>
+            <div class="cert-issuer">Microsoft</div>
+            <div class="cert-date">June 2025</div>
+            <a href="https://coursera.org/share/3ca1aea2c87e9133cadbc850610deaa1" class="cert-link" target="_blank">
+                View Certificate <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
         /* IBM Certification Special Styling */
         .ibm-cert .cert-icon {
