@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K Maheswar Reddy | Business Analyst | Portfolio</title>
+    <title>K Maheswar Reddy | Business Analyst | Data Analytics Portfolio</title>
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +15,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* ===== RESET & VARIABLES ===== */
         * {
             margin: 0;
             padding: 0;
@@ -33,12 +32,9 @@
             --light: #FFFFFF;
             --gray: #94A3B8;
             --gradient-1: linear-gradient(135deg, #0A66C2, #00A67E);
-            --gradient-2: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-3: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 10px 30px -10px rgba(10, 102, 194, 0.2);
             --shadow-lg: 0 20px 50px -15px rgba(10, 102, 194, 0.3);
-            --shadow-xl: 0 30px 70px -20px rgba(10, 102, 194, 0.4);
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -60,7 +56,6 @@
             font-weight: 600;
         }
 
-        /* ===== CUSTOM SCROLLBAR ===== */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -74,35 +69,6 @@
             border-radius: 10px;
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--secondary);
-        }
-
-        /* ===== CUSTOM CURSOR ===== */
-        .cursor {
-            width: 8px;
-            height: 8px;
-            background: var(--secondary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s ease;
-        }
-
-        .cursor-follower {
-            width: 40px;
-            height: 40px;
-            border: 2px solid rgba(0, 166, 126, 0.5);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9998;
-            transition: all 0.2s ease;
-            transform: translate(-50%, -50%);
-        }
-
-        /* ===== LOADING ANIMATION ===== */
         .loader-wrapper {
             position: fixed;
             top: 0;
@@ -135,19 +101,6 @@
             visibility: hidden;
         }
 
-        /* ===== GLOW EFFECT ===== */
-        .glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(10, 102, 194, 0.4) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(60px);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* ===== NAVIGATION ===== */
         nav {
             position: fixed;
             top: 0;
@@ -180,14 +133,15 @@
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: var(--light);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: var(--transition);
             position: relative;
         }
@@ -227,7 +181,6 @@
             transform: translateY(-2px);
         }
 
-        /* ===== HERO SECTION ===== */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -235,16 +188,6 @@
             padding: 0 5%;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 70% 50%, rgba(10, 102, 194, 0.1) 0%, transparent 60%);
-            pointer-events: none;
         }
 
         .hero-content {
@@ -308,10 +251,6 @@
             margin-bottom: 2.5rem;
         }
 
-        .hero-stat {
-            text-align: left;
-        }
-
         .hero-stat-number {
             font-size: 2rem;
             font-weight: 700;
@@ -340,25 +279,9 @@
             font-weight: 600;
             font-size: 0.95rem;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
             display: inline-block;
             cursor: pointer;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .btn:hover::before {
-            left: 100%;
+            border: none;
         }
 
         .btn-primary {
@@ -400,6 +323,7 @@
             color: var(--gray);
             transition: var(--transition);
             border: 1px solid rgba(10, 102, 194, 0.2);
+            text-decoration: none;
         }
 
         .social-links a:hover {
@@ -408,52 +332,6 @@
             transform: translateY(-5px);
         }
 
-        /* ===== SCROLL INDICATOR ===== */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            animation: bounce 2s infinite;
-        }
-
-        .mouse {
-            width: 26px;
-            height: 42px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            position: relative;
-        }
-
-        .mouse::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 8px;
-            background: var(--gradient-1);
-            left: 50%;
-            transform: translateX(-50%);
-            top: 8px;
-            border-radius: 2px;
-            animation: scroll 2s infinite;
-        }
-
-        @keyframes scroll {
-            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-            40% { transform: translateY(-15px) translateX(-50%); }
-            60% { transform: translateY(-8px) translateX(-50%); }
-        }
-
-        /* ===== SECTIONS ===== */
         section {
             padding: 5rem 5%;
             position: relative;
@@ -492,12 +370,11 @@
             border-radius: 2px;
         }
 
-        /* ===== ABOUT SECTION ===== */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
-            align-items: center;
+            align-items: start;
         }
 
         .about-text {
@@ -535,7 +412,6 @@
         .timeline-item:hover {
             transform: translateX(8px);
             border-color: var(--secondary);
-            background: rgba(255, 255, 255, 0.05);
         }
 
         .timeline-year {
@@ -553,48 +429,28 @@
         .timeline-subtitle {
             color: var(--gray);
             font-size: 0.9rem;
-            margin-bottom: 0.3rem;
         }
 
         .timeline-score {
             color: var(--primary-light);
             font-size: 0.9rem;
             font-weight: 500;
+            margin-top: 0.5rem;
         }
 
-        /* ===== SKILLS SECTION ===== */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 1.5rem;
         }
 
         .skill-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 1.8rem 1rem;
+            padding: 1.5rem;
             border-radius: 20px;
             text-align: center;
             border: 1px solid rgba(10, 102, 194, 0.2);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background: var(--gradient-1);
-            transition: height 0.3s ease;
-            z-index: 0;
-            opacity: 0.1;
-        }
-
-        .skill-card:hover::before {
-            height: 100%;
         }
 
         .skill-card:hover {
@@ -603,45 +459,40 @@
         }
 
         .skill-card i {
-            font-size: 2.2rem;
+            font-size: 2rem;
             background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.8rem;
-            position: relative;
-            z-index: 1;
         }
 
         .skill-card h3 {
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
         }
 
-        /* ===== EXPERIENCE SECTION ===== */
-        .exp-card {
+        .skill-card p {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+
+        .exp-card, .project-card, .cert-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 2rem;
             border-radius: 24px;
             border: 1px solid rgba(10, 102, 194, 0.2);
             transition: var(--transition);
-            backdrop-filter: blur(10px);
+        }
+
+        .exp-card {
+            padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .exp-card:hover {
+        .exp-card:hover, .project-card:hover, .cert-card:hover {
             transform: translateY(-8px);
             border-color: var(--secondary);
             box-shadow: var(--shadow-lg);
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 1rem;
         }
 
         .exp-icon {
@@ -655,13 +506,6 @@
             color: var(--secondary);
             font-size: 1.3rem;
             margin-bottom: 1rem;
-            transition: var(--transition);
-        }
-
-        .exp-card:hover .exp-icon {
-            background: var(--gradient-1);
-            color: white;
-            transform: scale(1.1);
         }
 
         .exp-title {
@@ -673,48 +517,32 @@
             color: var(--secondary);
             font-weight: 500;
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
         }
 
         .exp-date {
             color: var(--gray);
             font-size: 0.85rem;
-            margin-bottom: 1rem;
+            margin: 0.5rem 0 1rem;
         }
 
-        .exp-desc ul {
+        .exp-desc ul, .project-desc ul {
             padding-left: 1.2rem;
             color: var(--gray);
             font-size: 0.95rem;
         }
 
-        .exp-desc li {
+        .exp-desc li, .project-desc li {
             margin-bottom: 0.5rem;
         }
 
-        /* ===== PROJECTS SECTION ===== */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 2rem;
         }
 
-        .project-card {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(10, 102, 194, 0.2);
-            transition: var(--transition);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: var(--shadow-xl);
-        }
-
         .project-icon {
-            height: 180px;
+            height: 140px;
             background: linear-gradient(135deg, rgba(10, 102, 194, 0.2), rgba(0, 166, 126, 0.2));
             display: flex;
             align-items: center;
@@ -723,16 +551,10 @@
         }
 
         .project-icon i {
-            font-size: 4rem;
+            font-size: 3rem;
             background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
 
         .project-tag {
@@ -751,7 +573,7 @@
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 0.3rem;
         }
 
@@ -761,21 +583,11 @@
             margin-bottom: 1rem;
         }
 
-        .project-desc ul {
-            padding-left: 1.2rem;
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-desc li {
-            margin-bottom: 0.4rem;
-        }
-
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.6rem;
+            margin-top: 1rem;
         }
 
         .tech-tag {
@@ -783,73 +595,74 @@
             color: var(--secondary);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
         }
 
-        /* ===== CERTIFICATIONS ===== */
-        .certs-wrapper {
-            max-width: 500px;
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .cert-card {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 2rem;
-            border-radius: 24px;
-            border: 1px solid rgba(10, 102, 194, 0.2);
+            padding: 1.8rem;
             text-align: center;
-            transition: var(--transition);
-        }
-
-        .cert-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--secondary);
         }
 
         .cert-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         .cert-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
 
         .cert-issuer {
             color: var(--secondary);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .cert-date {
             color: var(--gray);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             margin: 0.5rem 0;
         }
 
-        .cert-link {
-            color: var(--light);
-            text-decoration: none;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
+        .achievements {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto 0;
+            text-align: center;
+            border: 1px solid rgba(10, 102, 194, 0.2);
         }
 
-        .cert-link:hover {
+        .achievements h3 {
+            margin-bottom: 1rem;
             color: var(--secondary);
-            gap: 0.8rem;
         }
 
-        /* ===== CONTACT SECTION ===== */
+        .achievements ul {
+            list-style: none;
+            color: var(--gray);
+        }
+
+        .achievements li {
+            margin-bottom: 0.5rem;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 2.5rem;
         }
 
-        .contact-info {
+        .contact-info, .contact-form {
             background: rgba(255, 255, 255, 0.02);
             padding: 2rem;
             border-radius: 24px;
@@ -863,7 +676,6 @@
 
         .contact-info p {
             color: var(--gray);
-            font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
 
@@ -887,14 +699,6 @@
             align-items: center;
             justify-content: center;
             color: var(--secondary);
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-
-        .contact-item:hover .contact-item-icon {
-            background: var(--gradient-1);
-            color: white;
-            transform: scale(1.1);
         }
 
         .contact-item-text h4 {
@@ -906,22 +710,10 @@
             color: var(--light);
             text-decoration: none;
             font-size: 0.9rem;
-            font-weight: 500;
         }
 
         .contact-item-text a:hover {
             color: var(--secondary);
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 2rem;
-            border-radius: 24px;
-            border: 1px solid rgba(10, 102, 194, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
         }
 
         .form-control {
@@ -931,20 +723,13 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             color: var(--light);
+            margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            transition: var(--transition);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--secondary);
-            background: rgba(10, 102, 194, 0.1);
-        }
-
-        textarea.form-control {
-            resize: vertical;
-            min-height: 100px;
         }
 
         .submit-btn {
@@ -961,10 +746,8 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
         }
 
-        /* ===== RESUME CARD ===== */
         .resume-card {
             background: var(--gradient-1);
             padding: 3rem;
@@ -975,40 +758,9 @@
             overflow: hidden;
         }
 
-        .resume-card::before {
-            content: '';
-            position: absolute;
-            top: -30px;
-            left: -30px;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-
-        .resume-card::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-
         .resume-card h3 {
             font-size: 1.8rem;
             margin-bottom: 0.8rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .resume-card p {
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 2;
         }
 
         .resume-btn {
@@ -1019,9 +771,8 @@
             text-decoration: none;
             border-radius: 40px;
             font-weight: 600;
+            margin-top: 1rem;
             transition: var(--transition);
-            position: relative;
-            z-index: 2;
         }
 
         .resume-btn:hover {
@@ -1029,7 +780,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* ===== FOOTER ===== */
         footer {
             background: var(--dark-light);
             padding: 2.5rem 5% 1.5rem;
@@ -1043,7 +793,6 @@
             background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 0.8rem;
         }
 
         .footer-links {
@@ -1057,7 +806,6 @@
             color: var(--gray);
             text-decoration: none;
             font-size: 0.85rem;
-            transition: var(--transition);
         }
 
         .footer-links a:hover {
@@ -1068,10 +816,8 @@
             color: var(--gray);
             font-size: 0.75rem;
             padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* ===== BACK TO TOP ===== */
         .back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -1097,51 +843,31 @@
             visibility: visible;
         }
 
-        .back-to-top:hover {
-            transform: translateY(-5px);
-        }
-
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
             .name { font-size: 3rem; }
-            .typed-text { font-size: 1.6rem; }
+            .nav-links { display: none; }
         }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
             .name { font-size: 2.2rem; }
             .typed-text { font-size: 1.2rem; }
-            .hero-stats { flex-direction: column; gap: 1rem; }
             .section-title { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 1rem; }
             .projects-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .cta-buttons { flex-direction: column; }
-            .btn { text-align: center; }
-            .name { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Loading Animation -->
     <div class="loader-wrapper" id="loader">
         <div class="loader"></div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Navigation -->
     <nav>
         <div class="logo">KMR</div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#education">Education</a>
             <a href="#skills">Skills</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
@@ -1155,37 +881,20 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <div class="greeting">
-                <span></span>
-                WELCOME TO MY PORTFOLIO
-            </div>
-            <h1 class="name">
-                I'm <span class="highlight">K Maheswar Reddy</span>
-            </h1>
-            <div class="typed-text">
-                <span id="typed"></span>
-            </div>
+        <div class="hero-content" data-aos="fade-up">
+            <div class="greeting"><span></span>WELCOME TO MY PORTFOLIO</div>
+            <h1 class="name">I'm <span class="highlight">K Maheswar Reddy</span></h1>
+            <div class="typed-text"><span id="typed"></span></div>
             <p class="hero-description">
-                B.Tech CSE (AI/ML) student at GITAM University | Aspiring Business Analyst | 
-                Passionate about using data to drive business decisions.
+                Motivated B.Tech CSE (AI/ML) student at GITAM University with hands-on experience in data analysis, 
+                business intelligence, and database management. Proficient in SQL, Excel, and Power BI with a strong 
+                foundation in data-driven problem-solving.
             </p>
             <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-number">2028</div>
-                    <div class="hero-stat-label">Graduation</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">4+</div>
-                    <div class="hero-stat-label">Certifications</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">5+</div>
-                    <div class="hero-stat-label">Projects</div>
-                </div>
+                <div class="hero-stat"><div class="hero-stat-number">2028</div><div class="hero-stat-label">Graduation</div></div>
+                <div class="hero-stat"><div class="hero-stat-number">4+</div><div class="hero-stat-label">Certifications</div></div>
+                <div class="hero-stat"><div class="hero-stat-number">3</div><div class="hero-stat-label">Major Projects</div></div>
             </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Hire Me</a>
@@ -1195,16 +904,10 @@
                 <a href="https://github.com/kallamadi18-code" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/kallamadi" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:kallamadi18@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://x.com/kallamadi21"><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">GET TO KNOW ME</div>
@@ -1213,44 +916,39 @@
         </div>
         <div class="about-grid">
             <div class="about-text" data-aos="fade-right">
-                <p>
-                    I am a B.Tech CSE (AI/ML) student at GITAM University with a strong interest in 
-                    business analysis and product management. I am currently building skills in Excel, 
-                    data analysis, and SQL to understand how data can support business decisions.
-                </p>
-                <p>
-                    I am motivated to gain real-world experience and contribute to meaningful projects 
-                    that bridge the gap between business needs and technical solutions.
-                </p>
+                <p>Motivated B.Tech CSE (AI/ML) student at GITAM University with hands-on experience in data analysis, business intelligence, and database management. Proficient in SQL, Excel, and Power BI with a strong foundation in data-driven problem-solving.</p>
+                <p>Seeking a Business Analysis internship to apply analytical skills in translating business requirements into actionable insights and supporting data-informed decision-making.</p>
                 <div class="about-highlight">
                     <i class="fas fa-quote-left" style="color: var(--secondary); margin-right: 0.5rem;"></i>
                     <p>Data-driven insights are the key to solving complex business problems. My goal is to become a Business Analyst who translates data into actionable strategies.</p>
                 </div>
+                <p><strong>📍 Location:</strong> Anantapur, Andhra Pradesh, India<br>
+                <strong>📧 Email:</strong> kallamadi18@gmail.com<br>
+                <strong>📱 Phone:</strong> +91 7013852045</p>
             </div>
             <div class="education-timeline" data-aos="fade-left">
                 <div class="timeline-item">
                     <div class="timeline-year">2024 - 2028</div>
-                    <h3 class="timeline-title">B.Tech – AI & ML</h3>
-                    <div class="timeline-subtitle">GITAM University, Bangalore</div>
-                    <div class="timeline-score">CGPA: 7.2</div>
+                    <h3 class="timeline-title">B.Tech – CSE (AI/ML)</h3>
+                    <div class="timeline-subtitle">GITAM Deemed University, Bengaluru</div>
+                    <div class="timeline-score">CGPA: 7.2/10</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2022 - 2024</div>
                     <h3 class="timeline-title">Intermediate (MPC)</h3>
-                    <div class="timeline-subtitle">Career Point Jr College</div>
+                    <div class="timeline-subtitle">State Board</div>
                     <div class="timeline-score">86%</div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2021 - 2022</div>
-                    <h3 class="timeline-title">High School</h3>
-                    <div class="timeline-subtitle">Keshava Reddy Concept School</div>
-                    <div class="timeline-score">79%</div>
+                    <h3 class="timeline-title">Secondary Examination</h3>
+                    <div class="timeline-subtitle">State Board</div>
+                    <div class="timeline-score">80%</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">MY EXPERTISE</div>
@@ -1258,18 +956,17 @@
             <div class="section-line"></div>
         </div>
         <div class="skills-grid">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-file-excel"></i><h3>Excel</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="150"><i class="fas fa-chart-line"></i><h3>Data Analysis</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-chart-pie"></i><h3>Business Analysis</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="250"><i class="fas fa-database"></i><h3>SQL</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-java"></i><h3>Java</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="350"><i class="fas fa-brain"></i><h3>Problem Solving</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-chart-simple"></i><h3>Data Viz</h3></div>
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="450"><i class="fas fa-search"></i><h3>Analytical Thinking</h3></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-file-excel"></i><h3>Microsoft Excel</h3><p>Pivot Tables, VLOOKUP, Dashboards</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-chart-pie"></i><h3>Power BI</h3><p>Data Visualization, KPI Tracking</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-database"></i><h3>SQL</h3><p>Database Querying, Joins, Optimization</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fab fa-python"></i><h3>Python</h3><p>Data Analysis, NLP, Pandas</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-chart-line"></i><h3>Business Analysis</h3><p>Requirements Gathering, RFM Segmentation</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fab fa-jira"></i><h3>Jira</h3><p>Project Management, Agile</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-brain"></i><h3>Analytical Thinking</h3><p>Data Management, Problem Solving</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-code"></i><h3>C Language</h3><p>Programming Fundamentals</p></div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">MY JOURNEY</div>
@@ -1278,23 +975,19 @@
         </div>
         <div class="exp-card" data-aos="fade-up">
             <div class="exp-icon"><i class="fas fa-hands-helping"></i></div>
-            <div class="exp-header">
-                <h3 class="exp-title">Community Services Member</h3>
-                <div class="exp-date">Jul 2025 – Nov 2025</div>
-            </div>
-            <div class="exp-org">GITAM University, Bangalore</div>
+            <h3 class="exp-title">Community Services Mobilizer Intern</h3>
+            <div class="exp-org">Directorate of Student Life, GITAM University</div>
+            <div class="exp-date">Jul 2025 – Nov 2025</div>
             <div class="exp-desc">
                 <ul>
-                    <li>Coordinated volunteer efforts and community outreach activities</li>
-                    <li>Collaborated with team members on various initiatives</li>
-                    <li>Developed strong communication and organizational skills</li>
-                    <li>Contributed to impactful community programs</li>
+                    <li>Coordinated student engagement activities and supported community development initiatives across the campus</li>
+                    <li>Assisted in planning and organizing outreach programs, awareness campaigns, and participation drives</li>
+                    <li>Demonstrated strong communication, teamwork, and organizational skills by collaborating with cross-functional teams to execute community-focused events</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">MY WORK</div>
@@ -1302,68 +995,78 @@
             <div class="section-line"></div>
         </div>
         <div class="projects-grid">
-            <div class="project-card" data-aos="flip-left" data-aos-delay="100">
-                <div class="project-icon"><i class="fas fa-chart-line"></i><span class="project-tag">Excel</span></div>
+            <div class="project-card" data-aos="flip-left">
+                <div class="project-icon"><i class="fas fa-chart-simple"></i><span class="project-tag">Jan-Mar 2026</span></div>
                 <div class="project-content">
-                    <h3 class="project-title">Student Marks Analysis</h3>
-                    <div class="project-tech">Microsoft Excel | Data Visualization</div>
+                    <h3 class="project-title">Customer Segmentation Dashboard</h3>
+                    <div class="project-tech">SQL | Microsoft Excel | Pivot Tables</div>
                     <div class="project-desc">
                         <ul>
-                            <li>Analyzed student data using Excel formulas (SUM, AVERAGE, IF)</li>
-                            <li>Created interactive charts to visualize performance trends</li>
-                            <li>Identified key insights for academic improvement</li>
+                            <li>Analyzed <strong>500K+ e-commerce transactions</strong> using SQL to clean data and compute customer behavioral metrics</li>
+                            <li>Performed <strong>RFM (Recency, Frequency, Monetary) segmentation</strong> on 4,000+ customers, revealing top 20% drive <strong>65% of total revenue</strong></li>
+                            <li>Built interactive Excel dashboard with pivot tables, slicers, and dynamic charts for real-time KPI tracking</li>
+                            <li>Recommended loyalty program projected to boost customer retention by <strong>18%</strong></li>
                         </ul>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">Pivot Tables</span>
-                        <span class="tech-tag">Charts</span>
-                    </div>
+                    <div class="tech-stack"><span class="tech-tag">SQL</span><span class="tech-tag">Excel</span><span class="tech-tag">RFM Analysis</span><span class="tech-tag">Pivot Tables</span></div>
                 </div>
             </div>
-            <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-                <div class="project-icon"><i class="fas fa-database"></i><span class="project-tag">SQL</span></div>
+            <div class="project-card" data-aos="flip-left">
+                <div class="project-icon"><i class="fas fa-robot"></i><span class="project-tag">AI/ML</span></div>
                 <div class="project-content">
-                    <h3 class="project-title">Sales Data Analysis</h3>
-                    <div class="project-tech">MySQL | Data Analysis</div>
+                    <h3 class="project-title">LLM-Powered Customer Feedback Synthesizer</h3>
+                    <div class="project-tech">Python | NLP | Large Language Models</div>
                     <div class="project-desc">
                         <ul>
-                            <li>Analyzed sales data using complex SQL queries and joins</li>
-                            <li>Generated insights on revenue trends and customer behavior</li>
-                            <li>Created reports to support business decisions</li>
+                            <li>Developed AI-powered framework to synthesize customer feedback and identify strategic business priorities</li>
+                            <li>Used <strong>causal inference techniques</strong> to extract actionable insights from unstructured feedback data</li>
+                            <li>Automated insight generation to support data-driven decision-making for product and marketing teams</li>
                         </ul>
                     </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Joins</span>
-                        <span class="tech-tag">Reporting</span>
+                    <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">LLM</span><span class="tech-tag">Causal Inference</span></div>
+                </div>
+            </div>
+            <div class="project-card" data-aos="flip-left">
+                <div class="project-icon"><i class="fas fa-chart-line"></i><span class="project-tag">Analytics</span></div>
+                <div class="project-content">
+                    <h3 class="project-title">Marketing Mix Optimizer: Geo-Experiment Simulator</h3>
+                    <div class="project-tech">Python | Data Analytics | Simulation Modeling</div>
+                    <div class="project-desc">
+                        <ul>
+                            <li>Built geo-experiment simulator to optimize marketing mix decisions using controlled experiments across regions</li>
+                            <li>Enabled <strong>data-driven budget allocation recommendations</strong> by measuring campaign effectiveness through statistical analysis</li>
+                            <li>Designed simulation framework for A/B testing and ROI analysis</li>
+                        </ul>
                     </div>
+                    <div class="tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">A/B Testing</span><span class="tech-tag">Simulation</span><span class="tech-tag">Statistical Analysis</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">CREDENTIALS</div>
             <h2 class="section-title">Certifications</h2>
             <div class="section-line"></div>
         </div>
-        <div class="certs-wrapper">
-            <div class="cert-card" data-aos="fade-up">
-                <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                <h3 class="cert-title">Microsoft AI & ML Engineering</h3>
-                <div class="cert-issuer">Microsoft</div>
-                <div class="cert-date">June 2024</div>
-                <a href="https://coursera.org/share/d365790a78e9b5aaf6b67e1a2bd138b9" class="cert-link" target="_blank">
-                    View Certificate <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+        <div class="certs-grid">
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fab fa-python"></i></div><h3 class="cert-title">Python for Data Science, AI & Development</h3><div class="cert-issuer">IBM</div><div class="cert-date">2025</div></div>
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fas fa-database"></i></div><h3 class="cert-title">MySQL and Database Design</h3><div class="cert-issuer">Scaler</div><div class="cert-date">Mar 2026</div></div>
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fab fa-aws"></i></div><h3 class="cert-title">AWS Financial Services Data Analytics</h3><div class="cert-issuer">Amazon Web Services</div><div class="cert-date">Mar 2026</div></div>
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fas fa-laptop-code"></i></div><h3 class="cert-title">Introduction to Computers & Office Productivity</h3><div class="cert-issuer">The University of Hong Kong</div><div class="cert-date">2025</div></div>
+        </div>
+        <div class="achievements" data-aos="fade-up">
+            <h3><i class="fas fa-trophy"></i> Achievements & Activities</h3>
+            <ul>
+                <li>🏆 Built end-to-end AI/ML and business analytics projects combining Python and machine learning</li>
+                <li>📜 Completed multiple industry-recognized certifications in data analytics, SQL, and cloud platforms</li>
+                <li>👥 Active member of technical and innovation-focused student groups at GITAM University</li>
+                <li>📚 Hobbies: Reading sci-fi novels, trekking, and writing</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="section-header" data-aos="fade-up">
             <div class="section-subtitle">CONNECT WITH ME</div>
@@ -1375,34 +1078,18 @@
                 <h3>Let's Work Together</h3>
                 <p>Actively looking for internship opportunities in Business Analysis, Data Analysis, and Product Management.</p>
                 <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-item-text"><h4>Email</h4><a href="mailto:kallamadi18@gmail.com">kallamadi18@gmail.com</a></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div class="contact-item-text"><h4>Phone</h4><a href="tel:+917013852045">+91 7013852045</a></div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
-                        <div class="contact-item-text"><h4>LinkedIn</h4><a href="https://linkedin.com/in/kallamadi" target="_blank">linkedin.com/in/kallamadi</a></div>
-                    </div>
+                    <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-envelope"></i></div><div class="contact-item-text"><h4>Email</h4><a href="mailto:kallamadi18@gmail.com">kallamadi18@gmail.com</a></div></div>
+                    <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div><div class="contact-item-text"><h4>Phone</h4><a href="tel:+917013852045">+91 7013852045</a></div></div>
+                    <div class="contact-item"><div class="contact-item-icon"><i class="fab fa-linkedin"></i></div><div class="contact-item-text"><h4>LinkedIn</h4><a href="https://linkedin.com/in/kallamadi" target="_blank">linkedin.com/in/kallamadi</a></div></div>
+                    <div class="contact-item"><div class="contact-item-icon"><i class="fab fa-github"></i></div><div class="contact-item-text"><h4>GitHub</h4><a href="https://github.com/kallamadi18-code" target="_blank">kallamadi18-code.github.io</a></div></div>
                 </div>
             </div>
             <div class="contact-form" data-aos="fade-left">
                 <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                    </div>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                    <input type="text" class="form-control" placeholder="Subject" required>
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
                     <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
@@ -1410,16 +1097,15 @@
         <div class="resume-card" data-aos="zoom-in">
             <h3>Download My Resume</h3>
             <p>Get my complete resume with all details, experience, and certifications.</p>
-            <a href="Maheswar_Reddy_New_Resume" download class="resume-btn">
+            <a href="Maheswar_Reddy_Resume.pdf" download class="resume-btn">
                 <i class="fas fa-download"></i> Download Resume
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-logo">KMR</div>
-        <p class="footer-text">B.Tech CSE (AI/ML) | Aspiring Business Analyst</p>
+        <p>B.Tech CSE (AI/ML) | Aspiring Business Analyst</p>
         <div class="footer-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -1427,45 +1113,22 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 K Maheswar Reddy. All rights reserved.</p>
-        </div>
+        <div class="footer-bottom"><p>© 2026 K Maheswar Reddy. All rights reserved.</p></div>
     </footer>
 
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-        AOS.init({ duration: 800, once: true, offset: 100 });
+        AOS.init({ duration: 800, once: true });
+        setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
 
-        window.addEventListener('load', function() {
-            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
-        });
-
-        // Custom cursor
-        const cursor = document.querySelector('.cursor');
-        const follower = document.querySelector('.cursor-follower');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-            follower.style.left = e.clientX + 'px';
-            follower.style.top = e.clientY + 'px';
-        });
-
-        // Typed.js
         new Typed('#typed', {
-            strings: ['Aspiring Business Analyst', 'Data Analyst', 'Excel Expert', 'Problem Solver'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true
+            strings: ['Aspiring Business Analyst 📊', 'Data Analyst 📈', 'SQL & Excel Expert 💻', 'Problem Solver 🎯'],
+            typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true
         });
 
-        // Navbar scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             const backToTop = document.getElementById('backToTop');
@@ -1478,12 +1141,11 @@
             }
         });
 
-        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
@@ -1491,10 +1153,10 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            e.target.reset();
         });
     </script>
 </body>
