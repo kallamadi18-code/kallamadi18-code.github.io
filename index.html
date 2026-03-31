@@ -476,34 +476,23 @@
             color: var(--gray);
         }
 
-        .experience-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .exp-card {
+        .exp-card, .project-card, .cert-card {
             background: rgba(255, 255, 255, 0.02);
             border-radius: 24px;
             border: 1px solid rgba(10, 102, 194, 0.2);
             transition: var(--transition);
-            padding: 2rem;
         }
 
-        .exp-card:hover {
+        .exp-card {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .exp-card:hover, .project-card:hover, .cert-card:hover {
             transform: translateY(-8px);
             border-color: var(--secondary);
             box-shadow: var(--shadow-lg);
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin-bottom: 0.5rem;
         }
 
         .exp-icon {
@@ -550,20 +539,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 2rem;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            border: 1px solid rgba(10, 102, 194, 0.2);
-            transition: var(--transition);
-            overflow: hidden;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--secondary);
-            box-shadow: var(--shadow-lg);
         }
 
         .project-icon {
@@ -632,17 +607,8 @@
         }
 
         .cert-card {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 24px;
-            border: 1px solid rgba(10, 102, 194, 0.2);
-            transition: var(--transition);
             padding: 1.8rem;
             text-align: center;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--secondary);
         }
 
         .cert-icon {
@@ -889,7 +855,6 @@
             .section-title { font-size: 2rem; }
             .hero-stats { flex-direction: column; gap: 1rem; }
             .projects-grid { grid-template-columns: 1fr; }
-            .exp-header { flex-direction: column; }
         }
     </style>
 </head>
@@ -929,7 +894,7 @@
             <div class="hero-stats">
                 <div class="hero-stat"><div class="hero-stat-number">2028</div><div class="hero-stat-label">Graduation</div></div>
                 <div class="hero-stat"><div class="hero-stat-number">4+</div><div class="hero-stat-label">Certifications</div></div>
-                <div class="hero-stat"><div class="hero-stat-number">5+</div><div class="hero-stat-label">Projects</div></div>
+                <div class="hero-stat"><div class="hero-stat-number">3</div><div class="hero-stat-label">Major Projects</div></div>
             </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn btn-primary">Hire Me</a>
@@ -952,7 +917,7 @@
         <div class="about-grid">
             <div class="about-text" data-aos="fade-right">
                 <p>Motivated B.Tech CSE (AI/ML) student at GITAM University with hands-on experience in data analysis, business intelligence, and database management. Proficient in SQL, Excel, and Power BI with a strong foundation in data-driven problem-solving.</p>
-                <p>Currently working as an InvestTech Operations Analyst at Zetheta Algorithms, gaining practical experience in data analytics, business analysis, and investment technology operations.</p>
+                <p>Seeking a Business Analysis internship to apply analytical skills in translating business requirements into actionable insights and supporting data-informed decision-making.</p>
                 <div class="about-highlight">
                     <i class="fas fa-quote-left" style="color: var(--secondary); margin-right: 0.5rem;"></i>
                     <p>Data-driven insights are the key to solving complex business problems. My goal is to become a Business Analyst who translates data into actionable strategies.</p>
@@ -976,7 +941,7 @@
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-year">2021 - 2022</div>
-                    <h3 class="timeline-title">Secondary School Certificate (SSC)</h3>
+                    <h3 class="timeline-title">Secondary School Certifcate (SSC)</h3>
                     <div class="timeline-subtitle">State Board</div>
                     <div class="timeline-score">80%</div>
                 </div>
@@ -997,8 +962,8 @@
             <div class="skill-card" data-aos="zoom-in"><i class="fab fa-python"></i><h3>Python</h3><p>Data Analysis, NLP, Pandas</p></div>
             <div class="skill-card" data-aos="zoom-in"><i class="fas fa-chart-line"></i><h3>Business Analysis</h3><p>Requirements Gathering, RFM Segmentation</p></div>
             <div class="skill-card" data-aos="zoom-in"><i class="fab fa-jira"></i><h3>Jira</h3><p>Project Management, Agile</p></div>
-            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-chart-simple"></i><h3>Marketing Analytics</h3><p>Campaign Analysis, ROI Tracking</p></div>
             <div class="skill-card" data-aos="zoom-in"><i class="fas fa-brain"></i><h3>Analytical Thinking</h3><p>Data Management, Problem Solving</p></div>
+            <div class="skill-card" data-aos="zoom-in"><i class="fas fa-code"></i><h3>C Language</h3><p>Programming Fundamentals</p></div>
         </div>
     </section>
 
@@ -1008,64 +973,17 @@
             <h2 class="section-title">Work <span>Experience</span></h2>
             <div class="section-line"></div>
         </div>
-        <div class="experience-wrapper">
-            <!-- Zetheta Algorithms - Current Role -->
-            <div class="exp-card" data-aos="fade-up">
-                <div class="exp-icon"><i class="fas fa-chart-line"></i></div>
-                <div class="exp-header">
-                    <div>
-                        <h3 class="exp-title">InvestTech Operations Analyst</h3>
-                        <div class="exp-org">Zetheta Algorithms Private Limited</div>
-                    </div>
-                    <div class="exp-date">Mar 2026 – Present · 1 mo</div>
-                </div>
-                <div class="exp-desc">
-                    <ul>
-                        <li>Analyzing investment technology operations and identifying optimization opportunities using data analytics</li>
-                        <li>Performing data analysis on operational metrics to support business decision-making</li>
-                        <li>Collaborating with cross-functional teams to streamline investment operations processes</li>
-                        <li>Utilizing SQL and Excel to extract insights from operational data and generate reports</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Zetheta Algorithms - Campaign Strategy Role -->
-            <div class="exp-card" data-aos="fade-up">
-                <div class="exp-icon"><i class="fas fa-chart-simple"></i></div>
-                <div class="exp-header">
-                    <div>
-                        <h3 class="exp-title">Campaign Strategy Analyst</h3>
-                        <div class="exp-org">Zetheta Algorithms Private Limited</div>
-                    </div>
-                    <div class="exp-date">Jan 2026 – Mar 2026 · 3 mos</div>
-                </div>
-                <div class="exp-desc">
-                    <ul>
-                        <li>Developed data-driven marketing campaign strategies to optimize customer engagement and ROI</li>
-                        <li>Analyzed campaign performance metrics using analytics tools to identify improvement opportunities</li>
-                        <li>Assisted in creating targeted marketing strategies based on customer segmentation analysis</li>
-                        <li>Collaborated with marketing teams to implement and track campaign effectiveness</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- GITAM Experience -->
-            <div class="exp-card" data-aos="fade-up">
-                <div class="exp-icon"><i class="fas fa-hands-helping"></i></div>
-                <div class="exp-header">
-                    <div>
-                        <h3 class="exp-title">Community Services Mobilizer Intern</h3>
-                        <div class="exp-org">Directorate of Student Life, GITAM University</div>
-                    </div>
-                    <div class="exp-date">Jul 2025 – Nov 2025 · 5 mos</div>
-                </div>
-                <div class="exp-desc">
-                    <ul>
-                        <li>Coordinated student engagement activities and supported community development initiatives across the campus</li>
-                        <li>Assisted in planning and organizing outreach programs, awareness campaigns, and participation drives</li>
-                        <li>Demonstrated strong communication, teamwork, and organizational skills by collaborating with cross-functional teams to execute community-focused events</li>
-                    </ul>
-                </div>
+        <div class="exp-card" data-aos="fade-up">
+            <div class="exp-icon"><i class="fas fa-hands-helping"></i></div>
+            <h3 class="exp-title">Community Services Mobilizer Intern</h3>
+            <div class="exp-org">Directorate of Student Life, GITAM University</div>
+            <div class="exp-date">Jul 2025 – Nov 2025</div>
+            <div class="exp-desc">
+                <ul>
+                    <li>Coordinated student engagement activities and supported community development initiatives across the campus</li>
+                    <li>Assisted in planning and organizing outreach programs, awareness campaigns, and participation drives</li>
+                    <li>Demonstrated strong communication, teamwork, and organizational skills by collaborating with cross-functional teams to execute community-focused events</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1134,8 +1052,8 @@
         </div>
         <div class="certs-grid">
             <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fab fa-python"></i></div><h3 class="cert-title">Python for Data Science, AI & Development</h3><div class="cert-issuer">IBM</div><div class="cert-date">2025</div></div>
-            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fas fa-database"></i></div><h3 class="cert-title">MySQL and Database Design</h3><div class="cert-issuer">Scaler</div><div class="cert-date">2026</div></div>
-            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fab fa-aws"></i></div><h3 class="cert-title">AWS Financial Services Data Analytics</h3><div class="cert-issuer">Amazon Web Services</div><div class="cert-date">2026</div></div>
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fas fa-database"></i></div><h3 class="cert-title">MySQL and Database Design</h3><div class="cert-issuer">Scaler</div><div class="cert-date"> 2026</div></div>
+            <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fab fa-aws"></i></div><h3 class="cert-title">AWS Financial Services Data Analytics</h3><div class="cert-issuer">Amazon Web Services</div><div class="cert-date"> 2026</div></div>
             <div class="cert-card" data-aos="fade-up"><div class="cert-icon"><i class="fas fa-laptop-code"></i></div><h3 class="cert-title">Introduction to Computers & Office Productivity</h3><div class="cert-issuer">The University of Hong Kong</div><div class="cert-date">2025</div></div>
         </div>
         <div class="achievements" data-aos="fade-up">
@@ -1192,7 +1110,6 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
@@ -1208,7 +1125,7 @@
         setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
 
         new Typed('#typed', {
-            strings: ['Aspiring Business Analyst 📊', 'Data Analyst 📈', 'SQL & Excel Expert 💻', 'Problem Solver 🎯', 'InvestTech Analyst 💼'],
+            strings: ['Aspiring Business Analyst 📊', 'Data Analyst 📈', 'SQL & Excel Expert 💻', 'Problem Solver 🎯'],
             typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true
         });
 
